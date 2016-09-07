@@ -19,12 +19,14 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+
 " ファイルをtree表示してくれるやーつ
-NeoBundle 'scrooloose/nerdtree'
-" Rubyのendを自動で入れてくれるやーつ
+"NeoBundle 'scrooloose/nerdtree'
+"Rubyのendを自動で入れてくれるやーつ
 NeoBundle 'tpope/vim-endwise'
 "複数行にコメント入れてくれるやーつ
-NeoBundle 'tomtom/tcomment_vim'
+"NeoBundle 'tomtom/tcomment_vim'
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -56,3 +58,7 @@ set shiftwidth=2
 
 "mdのシンタックスハイライト
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+
+"シンタックスハイライトオン
+syntax enable
+syntax on
