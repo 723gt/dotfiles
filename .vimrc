@@ -54,7 +54,7 @@ set showmatch
 set matchtime=1
 
 "自動インデントのスペースサイズ
-set shiftwidth=2
+set shiftwidth=0
 
 "mdのシンタックスハイライト
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
@@ -62,3 +62,5 @@ autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 "シンタックスハイライトオン
 syntax enable
 syntax on
+
+
