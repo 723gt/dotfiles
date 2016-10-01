@@ -44,7 +44,6 @@ NeoBundleCheck
 
 
 "タブサイズ
-set tabstop=2
 
 "行数表示
 set number
@@ -54,7 +53,9 @@ set showmatch
 set matchtime=1
 
 "自動インデントのスペースサイズ
-set shiftwidth=0
+set expandtab
+set tabstop=2
+set shiftwidth=2
 
 "mdのシンタックスハイライト
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
