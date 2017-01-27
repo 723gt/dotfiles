@@ -4,10 +4,10 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/natsumi/.vim/bundle/neobundle.vim/
+set runtimepath+=/Users/natsumi/.vim/bundle/neobundle.vim/
 
 " Required:
-call neobundle#begin(expand('/home/natsumi/.vim/bundle'))
+call neobundle#begin(expand('/Users/natsumi/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -19,13 +19,8 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
-
-" ファイルをtree表示してくれるやーつ
-"NeoBundle 'scrooloose/nerdtree'
 "Rubyのendを自動で入れてくれるやーつ
 NeoBundle 'tpope/vim-endwise'
-"複数行にコメント入れてくれるやーつ
-"NeoBundle 'tomtom/tcomment_vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -42,8 +37,6 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 
-
-"タブサイズ
 
 "行数表示
 set number

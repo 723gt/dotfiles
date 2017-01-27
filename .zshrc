@@ -113,20 +113,33 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 # cdコマンド実行後、lsを実行する
 function cd() {
-  builtin cd $@ && ls -v -F --color=auto;
+  builtin cd $@ && ls ;
 }
 
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
+alias la='ls -a'
+alias ll='ls -la'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
+#tmux Autostart
+if [[ ! -n $TMUX ]]; then
+   tmux new-session && exit
+fi
+
+
+ssh-add -K /Users/natsumi/.ssh/github > /dev/null
+ssh-add -K /Users/natsumi/.ssh/bitbucket > /dev/null
+clear
+#nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH 
