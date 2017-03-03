@@ -113,7 +113,7 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 # cdコマンド実行後、lsを実行する
 function cd() {
-  builtin cd $@ && ls ;
+  builtin cd $@ && ls -a ;
 }
 
 #alias ls='ls --color=auto'
@@ -143,3 +143,8 @@ ssh-add -K /Users/natsumi/.ssh/bitbucket > /dev/null
 clear
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH 
+
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
