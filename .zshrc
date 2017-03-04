@@ -148,3 +148,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+#postgresql
+export PGDATA=/usr/local/var/postgres
+alias pgs='pg_ctl -l /var/log/postgres start'
