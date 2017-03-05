@@ -151,4 +151,4 @@ eval "$(pyenv init -)"
 
 #postgresql
 export PGDATA=/usr/local/var/postgres
-alias pgs='pg_ctl -l /var/log/postgres start'
+alias pgs='postgres -D /usr/local/var/postgres'
