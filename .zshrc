@@ -152,3 +152,5 @@ eval "$(pyenv init -)"
 #postgresql
 export PGDATA=/usr/local/var/postgres
 alias pgs='postgres -D /usr/local/var/postgres'
+alias screen='screen-4.5.0'
+source ~/.nvm/nvm.sh
