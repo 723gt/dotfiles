@@ -153,4 +153,8 @@ eval "$(pyenv init -)"
 export PGDATA=/usr/local/var/postgres
 alias pgs='postgres -D /usr/local/var/postgres'
 alias screen='screen-4.5.0'
+alias mss='mysql.server start'
+alias mst='mysql.server stop'
+alias toms='/Library/Tomcat/bin/startup.sh'
+alias tomst='/Library/Tomcat/bin/shutdown.sh'
 source ~/.nvm/nvm.sh
