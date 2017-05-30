@@ -153,7 +153,7 @@ eval "$(pyenv init -)"
 export PGDATA=/usr/local/var/postgres
 alias pgs='postgres -D /usr/local/var/postgres'
 #screen
-alias screen='screen-4.5.0'
+#alias screen='screen-4.5.0'
 #MySQL
 alias mss='mysql.server start'
 alias mst='mysql.server stop'
