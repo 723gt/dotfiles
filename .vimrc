@@ -22,6 +22,9 @@ NeoBundle 'flazz/vim-colorschemes'
 "Rubyのendを自動で入れてくれるやーつ
 NeoBundle 'tpope/vim-endwise'
 
+"YAML
+NeoBundle 'mrk21/yaml-vim'
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -57,4 +60,8 @@ autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 syntax enable
 syntax on
 
-
+"カッコ入れてくれるかっこいいやつ  
+inoremap { {}<LEFT>
+inoremap ( ()<LEFT>
+inoremap < <><LEFT>
+inoremap [ []<LEFT>
