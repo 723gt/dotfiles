@@ -65,3 +65,6 @@ inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap < <><LEFT>
 inoremap [ []<LEFT>
+"クォーテーションを入れてくれるやつ
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
