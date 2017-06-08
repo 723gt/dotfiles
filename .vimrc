@@ -68,3 +68,6 @@ inoremap [ []<LEFT>
 "クォーテーションを入れてくれるやつ
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
+
+"バックスペースを有効化
+set backspace=indent,eol,start
