@@ -63,7 +63,6 @@ syntax on
 "カッコ入れてくれるかっこいいやつ  
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
-inoremap < <><LEFT>
 inoremap [ []<LEFT>
 "クォーテーションを入れてくれるやつ
 inoremap " ""<LEFT>
@@ -71,3 +70,6 @@ inoremap ' ''<LEFT>
 
 "バックスペースを有効化
 set backspace=indent,eol,start
+
+"カーソル行ハイライト
+set cursorline

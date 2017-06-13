@@ -158,6 +158,9 @@ alias pgs='postgres -D /usr/local/var/postgres'
 alias mss='mysql.server start'
 alias mst='mysql.server stop'
 #Tomcat
-alias toms='/Library/Tomcat/bin/startup.sh'
-alias tomst='/Library/Tomcat/bin/shutdown.sh'
+alias toms='/usr/local/apache-tomcat-7.0.77/bin/startup.sh'
+alias tomst='/usr/local/apache-tomcat-7.0.77/bin/shutdown.sh'
 source ~/.nvm/nvm.sh
+#java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export CLASSPATH=.:'/usr/local/apache-tomcat-7.0.77/lib/servlet-api.jar'
