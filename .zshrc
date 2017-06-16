@@ -164,3 +164,5 @@ source ~/.nvm/nvm.sh
 #java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLASSPATH=.:'/usr/local/apache-tomcat-7.0.77/lib/servlet-api.jar'
+#emacs殺し
+alias emacs='vim'
