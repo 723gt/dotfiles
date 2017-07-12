@@ -71,5 +71,3 @@ inoremap ' ''<LEFT>
 "バックスペースを有効化
 set backspace=indent,eol,start
 
-"カーソル行ハイライト
-set cursorline
