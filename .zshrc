@@ -168,3 +168,12 @@ export CLASSPATH=.:'/usr/local/apache-tomcat-7.0.77/lib/servlet-api.jar'
 alias emacs='vim'
 #nano殺し
 alias nano='vim'
+#Chrome
+alias chrome='open -a Google\ Chrome'
+#Go
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# added by travis gem
+[ -f /Users/natsumi/.travis/travis.sh ] && source /Users/natsumi/.travis/travis.sh
