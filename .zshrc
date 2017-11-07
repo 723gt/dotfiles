@@ -168,6 +168,8 @@ export CLASSPATH=.:'/usr/local/apache-tomcat-7.0.77/lib/servlet-api.jar'
 alias emacs='vim'
 #nano殺し
 alias nano='vim'
+#vimを早く呼び出したい!
+alias v='vim'
 #Chrome
 alias chrome='open -a Google\ Chrome'
 #Go
@@ -177,3 +179,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # added by travis gem
 [ -f /Users/natsumi/.travis/travis.sh ] && source /Users/natsumi/.travis/travis.sh
+
+#neovim
+export XDG_CONFIG_HOME=$HOME/.config
