@@ -21,6 +21,8 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 "Rubyのendを自動で入れてくれるやーつ
 NeoBundle 'tpope/vim-endwise'
+"Twitterやる
+NeoBundle 'twitvim/TwitVim'
 
 "YAML
 NeoBundle 'mrk21/yaml-vim'
@@ -83,3 +85,17 @@ if &term =~ "xterm"
                                        
   inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+
+let twitvim_count = 40
+nnoremap ,tp :<C-u>PosttoTwitter<CR>
+nnoremap ,tf :<C-u>FriendsTwitter<CR><C-w>j
+nnoremap ,tu :<C-u>UserTwitter<CR><C-w>j
+nnoremap ,tr :<C-u>RepliesTwitter<CR><C-w>j
+nnoremap ,tn :<C-u>NextTwitter<CR>
+autocmd FileType twitvim call s:twitvim_my_settings()
+function! s:twitvim_my_settings()
+    set nowrap
+endfunction
+
+:command Ft FriendsTwitter
+:command PT PosttoTwitter
