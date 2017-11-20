@@ -68,7 +68,7 @@ autoload -U colors; colors
 tmp_prompt="%F{cyan}[%n@%~]$%f "
 #tmp_prompt="%{${fg[green]}%}%n%# %{${reset_color}%}"
 tmp_prompt2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-tmp_rprompt="%{${fg[green]}%}[%T]%{${reset_color}%}"
+tmp_rprompt="%{${reset_color}%}%(?.%{$fg[green]%}.%{$fg[red]%})%(?!(*'-') !(*;-;%)? )%{${reset_color}%}"
 tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
 
 # rootユーザ時(太字にし、アンダーバーをつける)
