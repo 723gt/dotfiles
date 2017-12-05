@@ -99,3 +99,20 @@ endfunction
 
 :command Ft FriendsTwitter
 :command PT PosttoTwitter
+
+nnoremap nt :<C-u>tabnew<CR>
+nnoremap T gt
+
+"tabnewした後エクスプローラー
+:command Et call TabnewEx()
+
+function TabnewEx()
+  tabnew
+  e .
+endfunction
+
+":command Rinit :r ~/dotfiles/vim/template/init.rb
+autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
+autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
+
+:source /Users/natsumi/program/rubocop/main.vim

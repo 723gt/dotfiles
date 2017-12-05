@@ -12,7 +12,7 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 bindkey -v              # キーバインドをviモードに設定
 
 setopt auto_pushd        # cd時にディレクトリスタックにpushdする
-#setopt correct           # コマンドのスペルを訂正する
+setopt correct           # コマンドのスペルを訂正する
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
 setopt notify            # バックグラウンドジョブの状態変化を即時報告する
 #setopt equals            # =commandを`which command`と同じ処理にする
@@ -69,7 +69,8 @@ tmp_prompt="%F{cyan}[%n@%~]$%f "
 #tmp_prompt="%{${fg[green]}%}%n%# %{${reset_color}%}"
 tmp_prompt2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
 tmp_rprompt="%{${reset_color}%}%(?.%{$fg[green]%}.%{$fg[red]%})%(?!(*'-') !(*;-;%)? )%{${reset_color}%}"
-tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
+#tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
+tmp_sprompt="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
 
 # rootユーザ時(太字にし、アンダーバーをつける)
 if [ ${UID} -eq 0 ]; then
@@ -140,6 +141,7 @@ fi
 
 ssh-add -K /Users/natsumi/.ssh/github > /dev/null
 ssh-add -K /Users/natsumi/.ssh/bitbucket > /dev/null
+ssh-add -K /Users/natsumi/.ssh/macserver > /dev/null
 clear
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH 
@@ -160,6 +162,9 @@ alias mst='mysql.server stop'
 #Tomcat
 alias toms='/usr/local/apache-tomcat-7.0.77/bin/startup.sh'
 alias tomst='/usr/local/apache-tomcat-7.0.77/bin/shutdown.sh'
+alias toms8='/usr/local/apache-tomcat-8.5.23/bin/startup.sh'
+alias tomst8='/usr/local/apache-tomcat-8.5.23/bin/shutdown.sh'
+
 source ~/.nvm/nvm.sh
 #java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
@@ -182,3 +187,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 #neovim
 export XDG_CONFIG_HOME=$HOME/.config
+
+#usb
+alias usbumt='sudo diskutil umount'
+alias usbls='ls /Volumes'
