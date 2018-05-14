@@ -167,8 +167,7 @@ alias tomst8='/usr/local/apache-tomcat-8.5.23/bin/shutdown.sh'
 
 source ~/.nvm/nvm.sh
 #java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export CLASSPATH=.:'/usr/local/apache-tomcat-7.0.77/lib/servlet-api.jar'
+export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
 #emacs殺し
 alias emacs='vim'
 #nano殺し
@@ -191,3 +190,13 @@ export XDG_CONFIG_HOME=$HOME/.config
 #usb
 alias usbumt='sudo diskutil umount'
 alias usbls='ls /Volumes'
+
+#create gitignore
+alias gig='touch .gitignore;echo "create gitignore"'
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+#git -> gti  
+alias gti='git'
+
+#less -> less -R
+alias less='less -R'
