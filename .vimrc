@@ -27,8 +27,18 @@ NeoBundle 'twitvim/TwitVim'
 "YAML
 NeoBundle 'mrk21/yaml-vim'
 
+"Rubyのシンタックスハイライト  
+NeoBundle 'todesking/ruby_hl_lvar.vim'
+
+"Rails開発を便利にするやつ
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-surround'
+
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
+
 
 " Required:
 call neobundle#end()
@@ -105,6 +115,7 @@ nnoremap T gt
 
 "tabnewした後エクスプローラー
 :command Et call TabnewEx()
+:command Nt call TabnewEx()
 
 function TabnewEx()
   tabnew
@@ -116,3 +127,13 @@ autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
 autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 
 :source /Users/natsumi/program/rubocop/main.vim
+
+"vim-railsのalias
+:command Ec Econtroller
+:command Em Emodel
+:command Ev Eview
+:command Ej Ejavascript
+
+" TypeScript
+"Bundle 'typescript-vim'
+"autocmd BufRead,BufNewFile *.ts set filetype=typescript
