@@ -110,12 +110,15 @@ endfunction
 :command Ft FriendsTwitter
 :command PT PosttoTwitter
 
+"タブの移動
 nnoremap nt :<C-u>tabnew<CR>
-nnoremap T gt
+nnoremap T gT
+nnoremap N gt
 
 "tabnewした後エクスプローラー
 :command Et call TabnewEx()
-:command Nt call TabnewEx()
+:command E call TabnewEx()
+:command Ee e .
 
 function TabnewEx()
   tabnew
