@@ -137,6 +137,8 @@ autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 :command Ev Eview
 :command Ej Ejavascript
 
+" vsprit
+:command Ss split
 " TypeScript
 "Bundle 'typescript-vim'
 "autocmd BufRead,BufNewFile *.ts set filetype=typescript

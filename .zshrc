@@ -138,10 +138,7 @@ if [[ ! -n $TMUX ]]; then
    tmux new-session && exit
 fi
 
-
-ssh-add -K /Users/natsumi/.ssh/github > /dev/null
-ssh-add -K /Users/natsumi/.ssh/bitbucket > /dev/null
-ssh-add -K /Users/natsumi/.ssh/macserver > /dev/null
+zsh ./files/zsh/ssh-add.conf
 clear
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH 
@@ -168,8 +165,6 @@ alias tomst8='/usr/local/apache-tomcat-8.5.23/bin/shutdown.sh'
 source ~/.nvm/nvm.sh
 #java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
-#emacs殺し
-alias emacs='vim'
 #nano殺し
 alias nano='vim'
 #vimを早く呼び出したい!
@@ -200,3 +195,5 @@ alias gti='git'
 
 #less -> less -R
 alias less='less -R'
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
