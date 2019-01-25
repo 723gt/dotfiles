@@ -1,56 +1,55 @@
-"NeoBundle Scripts-----------------------------
+"dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
 " Required:
-set runtimepath+=/Users/natsumi/.vim/bundle/neobundle.vim/
+set runtimepath+=/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-call neobundle#begin(expand('/Users/natsumi/.vim/bundle'))
+if dein#load_state('/Users/natsumi/.vim/bundle')
+  call dein#begin('/Users/natsumi/.vim/bundle')
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+ " Let dein manage dein
+ " Required:
+  call dein#add('/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
-" Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-"Rubyのendを自動で入れてくれるやーつ
-NeoBundle 'tpope/vim-endwise'
-"Twitterやる
-NeoBundle 'twitvim/TwitVim'
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
 
-"YAML
-NeoBundle 'mrk21/yaml-vim'
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
 
-"Rubyのシンタックスハイライト  
-NeoBundle 'todesking/ruby_hl_lvar.vim'
+  " My plugin's
 
-"Rails開発を便利にするやつ
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-surround'
+  call dein#add('tpope/vim-endwise')
+  call dein#add('twitvim/TwitVim')
+  call dein#add('mrk21/yaml-vim')
+  call dein#add('todesking/ruby_hl_lvar.vim')
+  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-surround')
+  call dein#add('723gt/vitter')
 
+  call dein#add('vim-jp/vimdoc-ja')
+  call dein#add('slim-template/vim-slim')
 
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
-
-
-" Required:
-call neobundle#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+" If you want to install not installed plugins on
+" startup.
+if dein#check_install()
+  call dein#install()
+endif
 
+"End dein Scripts-------------------------
 
 
 "行数表示
@@ -69,10 +68,10 @@ set shiftwidth=2
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 
 "シンタックスハイライトオン
-syntax enable
-syntax on
+""syntax enable
+""syntax on
 
-"カッコ入れてくれるかっこいいやつ  
+"カッコ入れてくれるかっこいいやつ
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
@@ -87,12 +86,12 @@ if &term =~ "xterm"
   let &t_SI .= "\e[?2004h"
   let &t_EI .= "\e[?2004l"
   let &pastetoggle = "\e[201~"
-            
+
   function XTermPasteBegin(ret)
     set paste
     return a:ret
   endfunction
-                                       
+
   inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
@@ -113,7 +112,7 @@ endfunction
 "タブの移動
 nnoremap nt :<C-u>tabnew<CR>
 nnoremap T gT
-nnoremap N gt
+nnoremap " gt
 
 "tabnewした後エクスプローラー
 :command Et call TabnewEx()
@@ -130,6 +129,7 @@ autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
 autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 
 :source /Users/natsumi/program/rubocop/main.vim
+"source /Users/natsumi/program/vitter/plugin/vitter.vim
 
 "vim-railsのalias
 :command Ec Econtroller
@@ -142,3 +142,22 @@ autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 " TypeScript
 "Bundle 'typescript-vim'
 "autocmd BufRead,BufNewFile *.ts set filetype=typescript
+inoremap <C-c> <ESC>
+
+set statusline=%F
+set laststatus=2
+set statusline+=%=
+""set statusline+=%{g:this_branch}
+
+highlight statusline   term=NONE cterm=NONE guifg=cyan ctermfg=white ctermbg=lightblue
+
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
+set spelllang=en,cjk
+
+set clipboard+=unnamed
+set clipboard+=autoselect
