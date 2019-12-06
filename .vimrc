@@ -4,7 +4,8 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim
+" set runtimepath+=/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
 if dein#load_state('/Users/natsumi/.vim/bundle')
@@ -33,6 +34,14 @@ if dein#load_state('/Users/natsumi/.vim/bundle')
 
   call dein#add('vim-jp/vimdoc-ja')
   call dein#add('slim-template/vim-slim')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('Lokaltog/vim-easymotion')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('h1mesuke/vim-alignta')
+  call dein#add('othree/eregex.vim')
+  call dein#add('mhinz/vim-startify')
+  call dein#add('glidenote/memolist.vim')
+  call dein#add('mbbill/undotree')
 
   " Required:
   call dein#end()
@@ -106,13 +115,19 @@ function! s:twitvim_my_settings()
     set nowrap
 endfunction
 
-:command Ft FriendsTwitter
+:command FT FriendsTwitter
 :command PT PosttoTwitter
+:command Rpt RepliesTwitter
+:command Rldt RefreshTwitter
+:command NT NextTwitter
+:command SWA SwitchLoginTwitter
+:command DM DMTwitter
+:command SDM SendDMTwitter
 
 "タブの移動
 nnoremap nt :<C-u>tabnew<CR>
-nnoremap T gT
-nnoremap " gt
+" nnoremap T gT
+" nnoremap " gt
 
 "tabnewした後エクスプローラー
 :command Et call TabnewEx()
@@ -125,7 +140,7 @@ function TabnewEx()
 endfunction
 
 ":command Rinit :r ~/dotfiles/vim/template/init.rb
-autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
+"autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
 autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 
 :source /Users/natsumi/program/rubocop/main.vim
@@ -147,6 +162,7 @@ inoremap <C-c> <ESC>
 set statusline=%F
 set laststatus=2
 set statusline+=%=
+set statusline=%-(%f%m%h%q%r%w%)%=%{&ff}\|%{&fenc}\ %y%l,%c\ %0P
 ""set statusline+=%{g:this_branch}
 
 highlight statusline   term=NONE cterm=NONE guifg=cyan ctermfg=white ctermbg=lightblue
@@ -161,3 +177,56 @@ set spelllang=en,cjk
 
 set clipboard+=unnamed
 set clipboard+=autoselect
+
+"leader
+let mapleader=','
+
+"key bind
+nnoremap ;; :
+inoremap <silent> jj <ESC>
+
+"検索でハイライト
+set hlsearch
+nnoremap <C-c><C-c> :nohlsearch<CR><ESC>
+
+let g:EasyMotion_do_mapping = 0
+nmap s <Plug>(easymotion-bd-w)
+" nmap <C-l> <Plug>(easymotion-bd-jk)
+
+" Leader
+nmap <Leader>e :tabnew 
+
+" 
+inoremap <C-l> <C-x><C-l>
+hi Comment ctermfg=lightcyan
+
+" ファイルブラウザー
+let g:netrw_liststyle = 3
+let g:netrw_banner=0
+
+" startify
+let g:startify_files_number = 5
+let g:startify_list_order = [
+      \ [' 📋 最近使ったファイル:'],
+      \ 'files',
+      \ ['📁 最近ディレクトリ:'],
+      \ 'dir',
+      \ ['🖌 セッション'],
+      \ 'sessions',
+      \ ['📌 ブックマーク'],
+      \ 'bookmarks',
+      \ ]
+
+" Memo
+map <Leader>mn :MemoNew<CR>
+map <Leader>ml :MemoList<CR>
+map <Leader>mg :MemoGrep<CR>
+
+
+"UndoTree"
+:command UT UndotreeToggle
+if has("persistent_undo")
+    set undodir=$HOME."/.undodir"
+    set undofile
+endif
+

@@ -1,0 +1,11 @@
+[user]
+  name=yoshioka
+  email=yoshioka@netlab.jp
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  sh = stash
+  sp = stash pop
+  br = branch
+  gt = log --all --graph

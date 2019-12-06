@@ -114,7 +114,12 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 # cdコマンド実行後、lsを実行する
 function cd() {
-  builtin cd $@ && ls -a ;
+  dir=$@
+  if [ ! $dir = $HOME ]; then
+    builtin cd $@ && ls -a ;
+  else
+    builtin cd
+  fi
 }
 
 #alias ls='ls --color=auto'
@@ -138,8 +143,12 @@ if [[ ! -n $TMUX ]]; then
    tmux new-session && exit
 fi
 
-zsh ./files/zsh/ssh-add.conf
-clear
+# run setup script
+# it's gitignoer files
+if [ -e "~/dotfiles/setup.sh" ]; then
+  ~/dotfiles/setup.sh
+fi
+
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH 
 
@@ -151,20 +160,17 @@ eval "$(pyenv init -)"
 #postgresql
 export PGDATA=/usr/local/var/postgres
 alias pgs='postgres -D /usr/local/var/postgres'
+alias pgst='pg_ctl -D /usr/local/var/postgres stop'
 #screen
 #alias screen='screen-4.5.0'
 #MySQL
 alias mss='mysql.server start'
 alias mst='mysql.server stop'
-#Tomcat
-alias toms='/usr/local/apache-tomcat-7.0.77/bin/startup.sh'
-alias tomst='/usr/local/apache-tomcat-7.0.77/bin/shutdown.sh'
-alias toms8='/usr/local/apache-tomcat-8.5.23/bin/startup.sh'
-alias tomst8='/usr/local/apache-tomcat-8.5.23/bin/shutdown.sh'
 
 source ~/.nvm/nvm.sh
 #java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 #nano殺し
 alias nano='vim'
 #vimを早く呼び出したい!
@@ -192,8 +198,33 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 #git -> gti  
 alias gti='git'
+alias g='git'
 
 #less -> less -R
 alias less='less -R'
 export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+
+#git commi -v
+#set -o vi
+#bindkey -M viins 'jj' vi-cmd-mode
+
+alias md5sum='shasum'
+
+#edit dotfile
+alias zshrc='vim ~/.zshrc'
+alias szsh='source ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+alias cdhdd='cd /Volumes/hdd01'
+
+export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
+export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
+zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
+export HOMEBREW_GITHUB_API_TOKEN=deec362b7ea4449a88bf6e88092051434d32dd3e
+# eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+# perl
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
+
+# zsh vim mode
+bindkey -M viins 'jj' vi-cmd-mode
