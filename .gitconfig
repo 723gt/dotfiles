@@ -8,4 +8,5 @@
   sh = stash
   sp = stash pop
   br = branch
-  gt = log --all --graph
+  ll = log --all --graph
+  rb = rebase

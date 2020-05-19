@@ -230,3 +230,11 @@ if has("persistent_undo")
     set undofile
 endif
 
+" ysiw
+
+nm <Leader>{ ysiw{
+nm <Leader>[ ysiw[
+nm <Leader>( ysiw(
+nm <Leader>} ysiw}
+nm <Leader>] ysiw]
+nm <Leader>) ysiw)

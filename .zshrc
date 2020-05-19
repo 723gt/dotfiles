@@ -228,3 +228,8 @@ if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
 # zsh vim mode
 bindkey -M viins 'jj' vi-cmd-mode
+
+# bkup
+function bkup(){ tar -zcvf $1."`date '+%Y%m%d'`".tar.gz $1}
+
+
