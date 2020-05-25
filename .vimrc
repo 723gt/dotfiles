@@ -238,3 +238,5 @@ nm <Leader>( ysiw(
 nm <Leader>} ysiw}
 nm <Leader>] ysiw]
 nm <Leader>) ysiw)
+nm <Leader>" ysiw"
+
