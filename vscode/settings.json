@@ -1,0 +1,31 @@
+{
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "cSpell": {
+      "enabledLanguageIds": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "less",
+        "markdown",
+        "plaintext",
+        "scss",
+        "text",
+        "ruby",
+        "yaml",
+        "yml",
+        "dart"
+      ]
+    },
+    "vim.easymotion": true,                       // easymotionの有効化
+    "vim.easymotionKeys": "hklasdgjf",           // easymotionで使用するキー(今回はデフォルトのまま)
+
+    // 以下を追加 (ノーマルモードでsを押すとeasymotion発動)
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["s"],                     // 検索するためのキーをsから変えたい場合は､ここを変更する
+            "after": ["leader", "leader", "s"]   
+        }
+    ],
+}

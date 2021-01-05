@@ -1,6 +1,6 @@
 [user]
-  name=yoshioka
-  email=yoshioka@netlab.jp
+	name = yoshioka
+	email = yoshioka@netlab.jp
 [alias]
   co = checkout
   ci = commit

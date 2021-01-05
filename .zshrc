@@ -153,9 +153,9 @@ fi
 export PATH=$HOME/.nodebrew/current/bin:$PATH 
 
 #pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 #postgresql
 export PGDATA=/usr/local/var/postgres
@@ -167,7 +167,7 @@ alias pgst='pg_ctl -D /usr/local/var/postgres stop'
 alias mss='mysql.server start'
 alias mst='mysql.server stop'
 
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh
 #java
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
@@ -217,6 +217,8 @@ alias szsh='source ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias cdhdd='cd /Volumes/hdd01'
 
+alias c="cd"
+
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
@@ -232,4 +234,6 @@ bindkey -M viins 'jj' vi-cmd-mode
 # bkup
 function bkup(){ tar -zcvf $1."`date '+%Y%m%d'`".tar.gz $1}
 
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 

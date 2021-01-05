@@ -4,16 +4,16 @@ if &compatible
 endif
 
 " Required:
-" set runtimepath+=/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim
+" set runtimepath+=/Users/yoshiokanatsuonore/.vim/bundle/repos/github.com/Shougo/dein.vim
 set runtimepath+=$HOME/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/natsumi/.vim/bundle')
-  call dein#begin('/Users/natsumi/.vim/bundle')
+if dein#load_state('/Users/yoshiokanatsuonore/.vim/bundle')
+  call dein#begin('/Users/yoshiokanatsuonore/.vim/bundle')
 
  " Let dein manage dein
  " Required:
-  call dein#add('/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim')
+  call dein#add('/Users/yoshiokanatsuonore/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
@@ -42,6 +42,7 @@ if dein#load_state('/Users/natsumi/.vim/bundle')
   call dein#add('mhinz/vim-startify')
   call dein#add('glidenote/memolist.vim')
   call dein#add('mbbill/undotree')
+  call dein#add('dart-lang/dart-vim-plugin')
 
   " Required:
   call dein#end()
@@ -143,8 +144,8 @@ endfunction
 "autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
 autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 
-:source /Users/natsumi/program/rubocop/main.vim
-"source /Users/natsumi/program/vitter/plugin/vitter.vim
+" :source /Users/yoshiokanatsuonore/program/rubocop/main.vim
+"source /Users/yoshiokanatsuonore/program/vitter/plugin/vitter.vim
 
 "vim-railsのalias
 :command Ec Econtroller
