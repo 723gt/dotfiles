@@ -1,0 +1,49 @@
+{
+    "editor.renderControlCharacters": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/Users/natsumi/dotfiles/vscode/.vimrc",
+    "vim.easymotion": true,                       // easymotionの有効化
+    "vim.easymotionKeys": "hklasdgjf",           // easymotionで使用するキー(今回はデフォルトのまま)
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {"before": [";"], "after": [ ":"]},
+        {
+            "before": ["s"],                     // 検索するためのキーをsから変えたい場合は､ここを変更する
+            "after": ["leader", "leader", "s"]   
+        }
+    ],
+    "liveshare.presence": false,
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [
+        80
+      ],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false
+    },
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "cSpell": {
+      "enabledLanguageIds": [
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "less",
+        "markdown",
+        "plaintext",
+        "scss",
+        "text",
+        "ruby",
+        "yaml",
+        "yml",
+        "dart"
+      ]
+    },
+
+  }

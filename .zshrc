@@ -232,4 +232,15 @@ bindkey -M viins 'jj' vi-cmd-mode
 # bkup
 function bkup(){ tar -zcvf $1."`date '+%Y%m%d'`".tar.gz $1}
 
+# Andorid Studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+
+export PATH=$PATH:/Users/natsumi/development/flutter/bin
+
+alias simrun='open -a Simulator'
+export PATH="$PATH":"$HOME/.pub-cache/bin"

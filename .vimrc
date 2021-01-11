@@ -42,6 +42,7 @@ if dein#load_state('/Users/natsumi/.vim/bundle')
   call dein#add('mhinz/vim-startify')
   call dein#add('glidenote/memolist.vim')
   call dein#add('mbbill/undotree')
+  call dein#add('dart-lang/dart-vim-plugin')
 
   " Required:
   call dein#end()
