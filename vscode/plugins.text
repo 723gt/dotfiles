@@ -1,0 +1,16 @@
+code --install-extension 8amjp.charactercount
+code --install-extension bierner.markdown-mermaid
+code --install-extension bpruitt-goddard.mermaid-markdown-syntax-highlighting
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension Dart-Code.dart-code
+code --install-extension Dart-Code.flutter
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension MS-CEINTL.vscode-language-pack-ja
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension Nash.awesome-flutter-snippets
+code --install-extension redhat.vscode-yaml
+code --install-extension shuworks.vscode-table-formatter
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension vscodevim.vim
+code --install-extension vstirbu.vscode-mermaid-preview
