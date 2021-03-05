@@ -21,6 +21,9 @@
     "vim.easymotion": true,                       // easymotionの有効化
     "vim.easymotionKeys": "hklasdgjf",           // easymotionで使用するキー(今回はデフォルトのまま)
 
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/Users/yoshiokanatsuonore/.vimrc",
+    "vim.leader": ",",
     // 以下を追加 (ノーマルモードでsを押すとeasymotion発動)
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -28,4 +31,21 @@
             "after": ["leader", "leader", "s"]   
         }
     ],
+    "workbench.startupEditor": "newUntitledFile",
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false,
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [
+        80
+      ],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false
+    },
 }

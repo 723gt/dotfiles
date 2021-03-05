@@ -10,3 +10,4 @@
   br = branch
   ll = log --all --graph
   rb = rebase
+  cb = symbolic-ref --short HEAD
