@@ -8,12 +8,12 @@ endif
 set runtimepath+=$HOME/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/yoshiokanatsuonore/.vim/bundle')
-  call dein#begin('/Users/yoshiokanatsuonore/.vim/bundle')
+if dein#load_state('/Users/natsumi/.vim/bundle')
+  call dein#begin('/Users/natsumi/.vim/bundle')
 
  " Let dein manage dein
  " Required:
-  call dein#add('/Users/yoshiokanatsuonore/.vim/bundle/repos/github.com/Shougo/dein.vim')
+  call dein#add('/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')

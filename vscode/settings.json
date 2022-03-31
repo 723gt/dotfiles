@@ -22,13 +22,13 @@
     "vim.easymotionKeys": "hklasdgjf",           // easymotionで使用するキー(今回はデフォルトのまま)
 
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/Users/yoshiokanatsuonore/.vimrc",
+    "vim.vimrc.path": "/Users/natsumi/.vimrc",
     "vim.leader": ",",
     // 以下を追加 (ノーマルモードでsを押すとeasymotion発動)
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["s"],                     // 検索するためのキーをsから変えたい場合は､ここを変更する
-            "after": ["leader", "leader", "s"]   
+            "after": ["leader", "leader", "s"]
         }
     ],
     "workbench.startupEditor": "newUntitledFile",
@@ -48,4 +48,9 @@
       "editor.tabCompletion": "onlySnippets",
       "editor.wordBasedSuggestions": false
     },
+    "editor.codeActionsOnSave": null,
+    "dart.flutterSdkPaths": [
+      "~/fvm/default/bin"
+    ],
+    "editor.bracketPairColorization.enabled": true,
 }

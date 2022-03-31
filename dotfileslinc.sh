@@ -4,10 +4,10 @@ if [ ! -e 'setup.sh' ]; then
   touch ~/dotfiles/setup.sh
 fi
 
-if [ ! -e '~/.vim']; then
-  mkdir -p ~/.vim/after/plugin
-  mkdir ~/.vim/bundle
-fi
+#if [ ! -e '~/.vim' ]; then
+#  mkdir -p ~/.vim/after/plugin
+#  mkdir ~/.vim/bundle
+#fi
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc

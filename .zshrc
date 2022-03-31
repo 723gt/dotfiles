@@ -18,7 +18,7 @@ setopt notify            # バックグラウンドジョブの状態変化を�
 #setopt equals            # =commandを`which command`と同じ処理にする
 
 ### Complement ###
-autoload -U compinit; compinit # 補完機能を有効にする
+# autoload -U compinit; compinit # 補完機能を有効にする
 setopt auto_list               # 補完候補を一覧で表示する(d)
 setopt auto_menu               # 補完キー連打で補完候補を順に表示する(d)
 setopt list_packed             # 補完候補をできるだけ詰めて表示する
@@ -139,9 +139,9 @@ eval "$(rbenv init -)"
 #eval "$(pyenv init -)"
 
 #tmux Autostart
-if [[ ! -n $TMUX ]]; then
-   tmux new-session && exit
-fi
+# if [[ ! -n $TMUX ]]; then
+#    tmux new-session && exit
+# fi
 
 # run setup script
 # it's gitignoer files
@@ -170,7 +170,7 @@ alias mst='mysql.server stop'
 # source ~/.nvm/nvm.sh
 #java
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 #nano殺し
 alias nano='vim'
 #vimを早く呼び出したい!
@@ -238,3 +238,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
+# export PATH="$PATH:/Users/natsumi/development/flutter/bin"
+alias iphone='open -a Simulator'
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":"$HOME/fvm/default/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
+export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/
+
+alias freezed="flutter pub run build_runner build --delete-conflicting-outputs"
+alias fvmupdate="pub global list | awk '{print $1}' | xargs -n1 pub global activate"
+
+eval `ssh-agent`
+
+alias sshAgentStart="eval `ssh-agent`"
