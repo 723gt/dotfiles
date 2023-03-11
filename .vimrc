@@ -4,16 +4,16 @@ if &compatible
 endif
 
 " Required:
-" set runtimepath+=/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim
+" set runtimepath+=/Users/yoshioka/.vim/bundle/repos/github.com/Shougo/dein.vim
 set runtimepath+=$HOME/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/natsumi/.vim/bundle')
-  call dein#begin('/Users/natsumi/.vim/bundle')
+if dein#load_state('/Users/yoshioka/.vim/bundle')
+  call dein#begin('/Users/yoshioka/.vim/bundle')
 
  " Let dein manage dein
  " Required:
-  call dein#add('/Users/natsumi/.vim/bundle/repos/github.com/Shougo/dein.vim')
+  call dein#add('/Users/yoshioka/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
@@ -86,8 +86,8 @@ inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
 "クォーテーションを入れてくれるやつ
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+""inoremap " ""<LEFT>
+""inoremap ' ''<LEFT>
 
 "バックスペースを有効化
 set backspace=indent,eol,start
@@ -144,8 +144,8 @@ endfunction
 "autocmd BufNewFile *.rb 0r ~/dotfiles/vim/template/init.rb
 autocmd BufNewFile *.html 0r ~/dotfiles/vim/template/tamplate.html
 
-:source /Users/natsumi/program/rubocop/main.vim
-"source /Users/natsumi/program/vitter/plugin/vitter.vim
+":source /Users/yoshioka/program/rubocop/main.vim
+"source /Users/yoshioka/program/vitter/plugin/vitter.vim
 
 "vim-railsのalias
 :command Ec Econtroller

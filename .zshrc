@@ -139,9 +139,9 @@ eval "$(rbenv init -)"
 #eval "$(pyenv init -)"
 
 #tmux Autostart
-if [[ ! -n $TMUX ]]; then
-   tmux new-session && exit
-fi
+#if [[ ! -n $TMUX ]]; then
+#   tmux new-session && exit
+#fi
 
 # run setup script
 # it's gitignoer files
@@ -155,7 +155,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 #postgresql
 export PGDATA=/usr/local/var/postgres
@@ -170,7 +170,7 @@ alias mst='mysql.server stop'
 source ~/.nvm/nvm.sh
 #java
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 #nano殺し
 alias nano='vim'
 #vimを早く呼び出したい!
@@ -183,7 +183,7 @@ export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # added by travis gem
-[ -f /Users/natsumi/.travis/travis.sh ] && source /Users/natsumi/.travis/travis.sh
+[ -f /Users/yoshioka/.travis/travis.sh ] && source /Users/yoshioka/.travis/travis.sh
 
 #neovim
 export XDG_CONFIG_HOME=$HOME/.config
@@ -240,7 +240,24 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 
-export PATH=$PATH:/Users/natsumi/development/flutter/bin
+export PATH=$PATH:/Users/yoshioka/development/flutter/bin
 
 alias simrun='open -a Simulator'
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
+
+alias freezed="flutter pub run build_runner build --delete-conflicting-outputs"
+
+alias fbuild="flutter pub pub run build_runner build"
+alias ftest="flutter test --machine > machine.log || flutter pub global run dart_dot_reporter machine.log"
+alias ngrok="/Users/yoshioka/tools/ngrok"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yoshioka/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yoshioka/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yoshioka/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yoshioka/google-cloud-sdk/completion.zsh.inc'; fi
+
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+alias flocal="flutter pub run easy_localization:generate -S assets/translations -O lib/translations && flutter pub run easy_localization:generate -S assets/translations -O lib/translations -f keys -o locale_keys.g.dart"

@@ -1,17 +1,37 @@
 {
     "editor.renderControlCharacters": false,
     "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 0,
+    "vim.leader":  ",",
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/Users/natsumi/dotfiles/vscode/.vimrc",
+    "vim.vimrc.path": "~/dotfiles/.vimrc",
     "vim.easymotion": true,                       // easymotionの有効化
     "vim.easymotionKeys": "hklasdgjf",           // easymotionで使用するキー(今回はデフォルトのまま)
     "vim.normalModeKeyBindingsNonRecursive": [
       {"before": [";"], "after": [ ":"]},
-        {
-            "before": ["s"],                     // 検索するためのキーをsから変えたい場合は､ここを変更する
-            "after": ["leader", "leader", "s"]   
-        }
+      {
+          "before": ["s"],                     // 検索するためのキーをsから変えたい場合は､ここを変更する
+          "after": ["leader", "leader", "s"]   
+      },
+      {
+        "before":["leader", "leader", "t"],
+        "commands": ["testing.runAll"]
+      },
+      {
+        "before":["leader", "leader", "a", "d"],
+        "commands": ["flutter.openDevTools"]
+      },
+      {
+        "before":["leader", "leader", "a", "s", "d"],
+        "commands": ["flutter.selectDevice"]
+      },
+      {
+        "before":["leader", "leader", "a", "p", "g"],
+        "commands": ["flutter.packages.get"]
+      },
+      {
+        "before":["leader", "leader", "a", "h", "r", "l"],
+        "commands": ["flutter.hotReload"]
+      },
     ],
     "liveshare.presence": false,
     "[dart]": {
@@ -45,5 +65,28 @@
         "dart"
       ]
     },
-
+    "redhat.telemetry.enabled": true,
+    "vs-kubernetes": {
+      "vscode-kubernetes.minikube-path.mac": "/Users/yoshioka/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+      "vscode-kubernetes.helm-path.mac": "/Users/yoshioka/.vs-kubernetes/tools/helm/darwin-amd64/helm"
+    },
+    "vscodeGoogleTranslate.preferredLanguage": "Japanese",
+    "kotlin.languageServer.enabled": false,
+    "kotlin.debugAdapter.enabled": false,
+    "dart.runPubGetOnPubspecChanges": false,
+    "cSpell.customDictionaries": {
+      "custom-dictionary-user": {
+        "name": "custom-dictionary-user",
+        "path": "~/.cspell/custom-dictionary-user.txt",
+        "addWords": true,
+        "scope": "user"
+      }
+    },
+    "workbench.colorCustomizations": {},
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "editor.minimap.enabled": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "VSCodeNotion.accessToken": "03ef19cf1739aea31fcebce16da2f1b2fb0151a71b8ea4a874cef6ae56a05c6cd626ef61b91fee241905a3730f04a8047ed0c90a1737338ba44f2720bfa930dc4c70e913a68a15cc046dbb049525",
   }

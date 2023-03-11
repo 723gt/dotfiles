@@ -1,6 +1,6 @@
 [user]
   name=yoshioka
-  email=yoshioka@netlab.jp
+  email=natsumi.yoshioka@ipresence.jp
 [alias]
   co = checkout
   ci = commit
@@ -10,3 +10,4 @@
   br = branch
   ll = log --all --graph
   rb = rebase
+  cb = symbolic-ref --short HEAD
