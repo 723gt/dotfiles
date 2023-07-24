@@ -89,4 +89,5 @@
     "editor.minimap.enabled": false,
     "terminal.integrated.shellIntegration.enabled": false,
     "VSCodeNotion.accessToken": "03ef19cf1739aea31fcebce16da2f1b2fb0151a71b8ea4a874cef6ae56a05c6cd626ef61b91fee241905a3730f04a8047ed0c90a1737338ba44f2720bfa930dc4c70e913a68a15cc046dbb049525",
+    "editor.inlineSuggest.enabled": true,
   }
