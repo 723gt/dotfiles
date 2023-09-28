@@ -167,7 +167,7 @@ alias pgst='pg_ctl -D /usr/local/var/postgres stop'
 alias mss='mysql.server start'
 alias mst='mysql.server stop'
 
-source ~/.nvm/nvm.sh
+source ~/.config/nvm/nvm.sh
 #java
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.5`
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
@@ -240,7 +240,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 
-export PATH=$PATH:/Users/yoshioka/development/flutter/bin
+export PATH=$PATH:/Users/yoshioka/flutter/bin
 
 alias simrun='open -a Simulator'
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -250,7 +250,7 @@ alias freezed="flutter pub run build_runner build --delete-conflicting-outputs"
 
 alias fbuild="flutter pub pub run build_runner build"
 alias ftest="flutter test --machine > machine.log || flutter pub global run dart_dot_reporter machine.log"
-alias ngrok="/Users/yoshioka/tools/ngrok"
+alias ngrok="/usr/local/bin/ngrok"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/yoshioka/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yoshioka/google-cloud-sdk/path.zsh.inc'; fi
@@ -261,3 +261,22 @@ if [ -f '/Users/yoshioka/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 alias flocal="flutter pub run easy_localization:generate -S assets/translations -O lib/translations && flutter pub run easy_localization:generate -S assets/translations -O lib/translations -f keys -o locale_keys.g.dart"
+ssh-add ~/.ssh/github 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+## [Completion] 
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/yoshioka/.config/.dart-cli-completion/zsh-config.zsh ]] && . /Users/yoshioka/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+alias c="code ."
+
+## Sqlite
+export LDFLAGS="-L/opt/homebrew/opt/sqlite/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
+export GOROOT=/opt/homebrew/Cellar/go/1.21.0/libexec
+export GOPATH=$HOME/program/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:"$GOPATH/bin"
+export PATH=$PATH:$GOPATH/bin:$PATH

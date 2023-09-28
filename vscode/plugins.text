@@ -1,16 +1,42 @@
-code --install-extension 8amjp.charactercount
-code --install-extension bierner.markdown-mermaid
-code --install-extension bpruitt-goddard.mermaid-markdown-syntax-highlighting
-code --install-extension CoenraadS.bracket-pair-colorizer
-code --install-extension Dart-Code.dart-code
-code --install-extension Dart-Code.flutter
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension MS-CEINTL.vscode-language-pack-ja
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-code --install-extension ms-vsliveshare.vsliveshare
-code --install-extension Nash.awesome-flutter-snippets
-code --install-extension redhat.vscode-yaml
-code --install-extension shuworks.vscode-table-formatter
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension vscodevim.vim
-code --install-extension vstirbu.vscode-mermaid-preview
+bierner.markdown-mermaid
+Dart-Code.dart-code
+Dart-Code.flutter
+davidhouchin.whitespace-plus
+DougFinke.vscode-pandoc
+FelixAngelov.mason
+frenco.vscode-notion
+funkyremi.vscode-google-translate
+fwcd.kotlin
+GitHub.copilot
+GitHub.copilot-chat
+GitHub.remotehub
+golang.go
+Gruntfuggly.todo-tree
+hediet.vscode-drawio
+Hridoy.rails-snippets
+humao.rest-client
+jcbuisson.vue
+kaiwood.endwise
+mathiasfrohlich.Kotlin
+mintlify.document
+ms-azuretools.vscode-docker
+MS-CEINTL.vscode-language-pack-ja
+ms-kubernetes-tools.vscode-kubernetes-tools
+ms-vscode.azure-repos
+ms-vscode.remote-repositories
+ms-vsliveshare.vsliveshare
+Nash.awesome-flutter-snippets
+nopeslide.vscode-drawio-plugin-mermaid
+octref.vetur
+rebornix.ruby
+redhat.vscode-yaml
+robert-brunhage.flutter-riverpod-snippets
+shd101wyy.markdown-preview-enhanced
+sswg.swift-lang
+streetsidesoftware.code-spell-checker
+vadimcn.vscode-lldb
+vscodevim.vim
+Vue.volar
+wingrunr21.vscode-ruby
+yzane.markdown-pdf
+yzhang.markdown-all-in-one
